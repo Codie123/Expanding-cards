@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+:root{
+
+    --clr-bg:#333;
+    --clr-text:#222;
+    --clr-sub-text:#555;
+    --clr-tomato:#ff7979;
+    --clr-white:#ffff;
+    /* fonts */
+    --ft-lato:'Lato', sans-serif;
+}
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--ft-lato);
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    background-color: var(--clr-white);
+    transform-origin: top left;
+    padding: 50px;
+    transition: transform 0.5s ease-in;
+}
+.content{
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+.main-img{
+    width:100%;
+}
+
+.nav-menu-container{
+   position: fixed;
+   top: -100px;
+   left: -100px;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--clr-tomato);
+    transition: transform 0.4s ease-in;
+}
+.circle button{
+    border: none;
+    background-color: transparent;
+    color: var(--clr-white);
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute;
+    height: 80px;
+    transform-origin: top left;
+}
+.circle #open{
+    top: 101px;
+    left: 116px;
+}
+.circle #close{
+    top: 78px;
+    left: 47px;
+    transform: rotate(21deg);
+}
+.navigation {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+.navigation .nav-list{
+    list-style-type: none;
+    padding-left: 30px;
+}
+.nav-links:nth-child(1){
+    transform: translateX(-100%);
+}
+.nav-links:nth-child(2){
+    transform: translateX(-150%);
+}
+.nav-links:nth-child(3){
+    transform: translateX(-200%);
+}
+.navigation .nav-list .nav-links{
+    text-transform: uppercase;
+    color: var(--clr-white);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transition: transform 0.4s ease-in;
+    /* transform: translateX(-100%); */
+}
+.navigation .nav-list .nav-links i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+nav ul li{
+    text-transform: uppercase;
+    color: var(--clr-white);
+    margin: 40px 0;
+    font-weight: 600;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+} */
+/* span{
+    padding-left: 10px;
+} */
+/* Active states  */
+.container.active{
+    transform: rotate(-20deg);
+}
+.container.active .circle{
+    transform: rotate(-90deg);
+}
+.container.active + .navigation .nav-links{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+/* helper class */
+.pd-top-bottom{
+    padding:22px 0;
+}
+.mg-left-15{
+    margin-left: 15px;
+}
+.mg-left-30{
+    margin-left: 30px;
+}

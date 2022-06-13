@@ -1,0 +1,49 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: steelblue;
+}
+.container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.input{
+    padding: 18px 20px;
+    outline: none;
+    border: none;
+    width: 20%;
+    height: 50px;
+    font-size: 18px;
+    transition: width 0.4s ease-in;
+}
+.search{
+    position: absolute;
+    outline: none;
+    border: none;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 18px 20px ;
+    transform: translateX(0);
+    transition: all 0.4s ease-in;
+}
+/* active */
+.container.active .input{
+    width: 100%;
+}
+.container.active .search{
+    transform: translateX(150px);
+}
