@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700&display=swap');
+
+:root{
+
+    --ft-cairo:'Cairo', sans-serif;
+}
+html{
+    font-size: 100%;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--ft-cairo);
+    color: rgb(239, 239, 239);
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #070b12;
+  ;
+}
+.profile-sec{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-sec h1{
+    font-size: 16px;
+    line-height: 1;
+}
+.profile-sec h1:hover{
+    color: cyan;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.profile-sec span{
+    font-size: 10px ;
+    color: white;
+}
+.icon-list i{
+    font-size: 10px;
+    margin-right: 10px;
+    color: #657c8f;
+    opacity: 0.7;
+}
+.icon-list i:hover{
+    color: cyan;
+    opacity: 0.7;
+    cursor:pointer;
+}
+.poll-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+.item{
+    position: relative;
+    background-color: #657c8f;
+    border-radius: 8px;
+    padding: 0 10px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.item::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.question{
+    font-size: 18px;
+    /* margin-bottom: 10px; */
+}
