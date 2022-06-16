@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=M+PLUS+1:wght@600;700;800;900&display=swap');
+:root{
+    --font-default:'Koulen', cursive;
+
+}
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+a,a:active,a:visited{
+    text-decoration: none;
+    color: white;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    font-family: var(--font-default);
+    color: white;
+    line-height: 1.5;
+}
+.nav{
+    color:#5265f7;
+    padding: 25px 0;
+}
+.nav .container-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+}
+.container-nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    /* overflow: auto; */
+    padding: 0 40px;
+}
+.container-nav .nav-list{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 10px;
+}
+.logo{
+    font-size: 3rem;
+    line-height: normal;
+    position: relative;
+    overflow: hidden;
+}
+.nav-list li a{
+    color: #ebf0f3;
+    font-size: 22px;
+}
+.nav-list li a:hover{
+   color: #5265f7;
+}
+
+/* hero */
+.hero{
+    display: flex;
+    height: 320px;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero .container-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+
+}
+.typo-hero{
+    font-size: 3rem;
+}
+.empty-block{
+    position: relative;
+    background-color: #5265f7;
+    width: 100%;
+    height: 100%;
+}
+.empty-block::before{
+    content: "";
+    width: 89%;
+    height: 100%;
+    position: absolute;
+    background-color: #ebf0f3;
+    background-image: url(./images/terminal.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    transform: translate3d(-25px, 25px, 0);
+    transition: transform 0.3s;
+}
+.empty-block:hover::before{
+    transform: translate3d(-40px, 40px, 0);
+    /* transform:0.3s cubic-bezier(.43, .04, .32, .97);     */
+}
+.typo-hero span:nth-child(1){
+    color: #5265f7;
+}
+
+
+/* animation  */
+.block-element{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #ffffff;
+    transform: translateX(-101%);
+    transition: all 300ms ease-in;
+    animation-duration: 1s;
+    animation-name: hover;
+    animation-play-state: running;
+}
+
+
+@keyframes hover{
+    100%{
+        transform: translateX(100%);
+    }
+}
+
