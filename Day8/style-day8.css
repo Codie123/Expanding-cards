@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;400;500;700&display=swap');
+html{
+    font-size: 100%;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Anek Malayalam', sans-serif;
+    background-color: #0c0c0c;
+    color: white;
+}
+.container{
+    padding: 20px 40px;
+    background-color: black;
+    border-radius: 0.625rem;
+}
+.container h1{
+    font-weight: 400;
+    font-size: 3rem;
+    margin-top: 30px;
+    text-align: center;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 0;
+    display: block;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    min-width: 5px;
+}
+.btn{
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background-color: #0091e6;
+    border-radius: 0.625rem;
+    outline: none;
+    border: 0;
+    color: rgb(4, 4, 8);
+    margin-bottom: 10px;
+}
+.container p{
+    font-size: 18px ;
+    margin-top: 30px;
+}
+.container a {
+    text-decoration: none;
+    color: #0091e6;
+}
+/* active state */
+.btn:active{
+    transform: scale(0.98);
+}
+.form-control input:focus,
+.form-control input:valid{
+    border-bottom-color: #0091e6;
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    transform: translateY(-30px);
+    color: #0091e6;
+}

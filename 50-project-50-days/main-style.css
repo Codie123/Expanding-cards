@@ -17,7 +17,7 @@ a,a:active,a:visited{
 }
 body{
     height: 100vh;
-    background-color: black;
+    background-color: #0c0c0c;
     font-family: var(--font-default);
     color: white;
     line-height: 1.5;
@@ -61,33 +61,60 @@ body{
 
 /* hero */
 .hero{
-    display: flex;
+/* new folarin code */
+position: relative;
+top: 0rem;
+max-width: 100%;
+min-height: 0rem;
+padding: 0rem 1.25rem;
+}
+
+    /* old code */
+    /* display: flex;
     height: 320px;
     justify-content: center;
-    flex-direction: column;
-}
+    flex-direction: column; */
+
 .hero .container-nav{
+    /* new folarin code */
+    max-width: 78.125rem;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
+    /* old code */
+
+
+    /* display: flex;
     align-items: center;
     height: 100%;
     justify-content: space-between;
     width: 100%;
-    padding: 0;
+    padding: 0; */
 
 }
 .typo-hero{
-    font-size: 3rem;
+    /* new folarin code */
+    min-height: 0rem;
+    padding: 3.125rem 0rem 1.25rem 0rem;
+    width: 100%;
 }
+.typo-hero h2{
+    font-size: 6.25rem;
+    line-height: 6.25rem;
+}
+    /* old code */
+    /* font-size: 3rem; */
+
 .empty-block{
     position: relative;
     background-color: #5265f7;
-    width: 100%;
-    height: 100%;
+    width: 439px;
+    height: 210px;
 }
 .empty-block::before{
     content: "";
-    width: 89%;
-    height: 100%;
+    width: 100%;
+    height: 210px;
     position: absolute;
     background-color: #ebf0f3;
     background-image: url(./images/terminal.svg);
@@ -105,7 +132,154 @@ body{
     color: #5265f7;
 }
 
+@media(max-width:960px){
 
+}
+/* Section sKill */
+.skills{
+    max-width: 100%;
+    min-height: 0rem;
+    padding: 0rem 1.25rem;
+}
+.skills-container{  
+    max-width: 78.125rem;
+    margin: 0rem auto;
+}
+.skill-heading{
+    padding: 4.375rem 0rem 3.125rem 0rem;
+}
+.skill-heading h2{
+    font-size: 2rem;
+    line-height: 2rem;
+    color: white;
+    font-weight: 400;
+}
+hr{
+    color: #5265f7;
+    background-color: #5265f7;
+    height: 0.25rem;
+    width:14.5rem;
+    margin: 1.5625rem 0rem 0rem 0rem;
+    text-align: left;
+    border-radius: 3.125rem;
+    border-color: #5265f7;
+}
+.skill-section{
+    display: grid;
+    gap: 0.9375rem;
+    margin: 0rem 0rem;
+    grid-template-rows: 1fr;
+}
+@media(min-width:786px){
+    .skill-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+@media(min-width:1200px){
+    .skill-section{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+    }
+}
+.skill{
+    border-radius: 0.625rem;
+    padding: 1.5625rem;
+    background-color: black;
+}
+.skill h3{
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    color: white;
+    font-weight: 400;
+}
+.skill p{
+    margin-top:1.25rem;
+}
+.skill span{
+    margin-right: 0.9375rem;
+}
+.skill i{
+    color: #5265f7;
+    font-size: 1.875rem;
+}
+/* section projects */
+.projects{
+    max-width: 100%;
+    min-height: 0rem;
+    background-color: black;
+    padding: 0rem 1.25rem;
+    margin: 3.125rem 0rem;
+}
+.projects-container{
+    max-width: 78.125rem;
+    margin: 0rem auto;
+    padding-bottom: 4.375rem;
+}
+.project-heading{
+    padding: 3.125rem 0rem 3.125rem 0rem;
+}
+.project-section{
+    margin: 0rem 0rem;
+    display: grid;
+    gap: 0.9375rem;
+    grid-template-rows: 1fr;
+}
+@media(min-width:1200px){
+    .project-section{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+}
+@media(min-width:786px){
+    .project-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.project{
+    padding: 2.5rem 1.5625rem;
+    border-radius: 0.625rem;
+    background-color:#0c0c0c;
+}
+.project-top h3{
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    color: #5265f7;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.project-top p{
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    margin-bottom: 1rem;
+}
+.project-bottom a{
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    
+}
+.project-bottom img{
+    display: block;
+    max-width: 100%;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+.project-links ul{
+    display: flex;
+}
+.project-links li{
+    list-style: none;
+    flex: 1;
+    text-align: right;
+}
+.project-links li:nth-child(1){
+    text-align: left;
+    margin-left: -2.5rem;
+}
+.project-links a{
+    color: #5265f7;    
+}
 /* animation  */
 .block-element{
     position: absolute;
