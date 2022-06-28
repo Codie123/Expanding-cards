@@ -130,8 +130,17 @@ padding: 0rem 1.25rem;
 }
 .typo-hero span:nth-child(1){
     color: #5265f7;
+    position: relative;
 }
-
+.pr-typo::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 @media(max-width:960px){
 
 }
@@ -279,6 +288,51 @@ hr{
 }
 .project-links a{
     color: #5265f7;    
+}
+/* Authors  */
+.about{
+    padding: 2.5rem 1.5625rem;
+    border-radius: 0.625rem;
+    background-color:#0c0c0c;
+}
+.about-container{
+    max-width: 78.125rem;
+    margin: 0rem auto;
+    padding-bottom: 4.375rem;
+}
+.about-heading{
+    padding: 3.125rem 0rem 3.125rem 0rem;
+}
+.about-section{
+    margin: 0rem 0rem;
+    display: grid;
+    gap: 0.9375rem;
+    grid-template-rows: 1fr;
+}
+@media(min-width:1200px){
+    .about-section{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+}
+@media(min-width:786px){
+    .about-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.about-card{
+    display: flex;
+    gap: 25px;
+    padding: 2.5rem 1.5625rem;
+    border-radius: 0.625rem;
+    background-color: black;
+    align-items: center;
+}
+.profile img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 /* animation  */
 .block-element{

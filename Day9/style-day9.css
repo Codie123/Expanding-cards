@@ -1,0 +1,22 @@
+html{
+    font-size: 100%;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.btn{
+    margin: 10px;
+    background-color: brown;
+    padding: 20px;
+    font-size: 18px;
+    color: aliceblue;
+}
