@@ -21,6 +21,7 @@ body{
     background-color: var(--bg-clr);
     color: white;
     font-family: var(--font-main);
+     font-family:'Anek Malayalam', sans-serif;
 }
 .container{
     max-width: 100%;

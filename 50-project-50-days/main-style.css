@@ -334,6 +334,29 @@ hr{
     height: 120px;
     border-radius: 50%;
 }
+.container-details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.social ul{
+    display: flex;
+    gap: 10px;
+    transition: transform 1s ease-in;
+    padding: 0;
+
+}
+.social ul li{
+    list-style-type: none;
+}
+.social i {
+    font-size: 2em;
+    color: #5265f7;
+}
+.social i:hover{
+    transition: transform .2s ease-in;
+    transform: translateY(-8px);
+}
 /* animation  */
 .block-element{
     position: absolute;

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;400;500;700&display=swap');
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    background-color: #0c0c0c;
+    color: white;
+    font-family: 'Anek',sans-serif;
+}
+.header{
+    text-align: center;
+}
+.header h1{
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+.container-glass{
+        /* position: relative; */
+        width: 180px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* background-color: #28559a; */
+        border: 2px solid white;
+        border-radius: 0 0 50px 50px;
+        overflow: hidden;
+}
+.content{
+    width: 180px;
+    height: 10px;
+    display: inherit;
+    background: #06627e40;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.content span{
+    font-size: .9em;
+}
+.water{
+    
+    height:0px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #456cf0;
+    color: white;
+    transition: all 0.6s ease-in-out;
+}
+.glasses{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 113px;
+    /* background: blue; */
+    align-items: center;
+    gap: 10px;
+}
+.cup{
+    width: 50px;
+    height: 100px;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: darkslategrey; */
+    border: 2px solid white;
+    border-radius: 0 0 50px 50px;
+    cursor: pointer;
+}
+.cup.active{
+    background-color: #456cf0;
+    color: white;
+}

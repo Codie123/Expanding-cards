@@ -59,6 +59,7 @@ body{
     gap: 8px;
     width: 100%;
 }
+
 .tag{
     padding: 10px;
     background: var(--card-clr);
