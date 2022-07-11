@@ -45,6 +45,14 @@ body{
     list-style: none;
     gap: 10px;
 }
+@media(max-width:800px){
+.hero .container-nav{
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+}
 .logo{
     font-size: 3rem;
     line-height: normal;
@@ -66,6 +74,7 @@ position: relative;
 top: 0rem;
 max-width: 100%;
 min-height: 0rem;
+margin-bottom: 130px;
 padding: 0rem 1.25rem;
 }
 

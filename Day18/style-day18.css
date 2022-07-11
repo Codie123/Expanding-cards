@@ -1,0 +1,90 @@
+:root{
+   --bg-clr:#202632;
+    --card-clr:#313a49;
+    --cyan:#2ece82;
+    --font-main:'Anek Malayalam', sans-serif;
+}
+html{
+    font-size: 100%;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background:; */
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    transition: .4s ease-in;
+}
+body::before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: #0d0d0d80;
+    position:absolute;
+}
+
+.container-slides{
+    width: 70vw ;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 30px #000000ad;
+}
+
+.slides{
+    position: absolute;
+    top: -15vh;
+    left: -31.5vh;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.btn-right{
+    position: fixed;
+    top: 50%;
+    right:calc(15vw - 65px);
+    background: transparent;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+    color: white;
+
+}
+.btn-left{
+    position: fixed;
+    background: transparent;
+    top: 50%;
+    left: calc(15vw - 65px);
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+    color: white;
+}
+/* .s1{
+    background-image: url(./images/pexels-aleksandar-pasaric-1388030.jpg);
+}
+.s2{
+    background-image: url(./images/pexels-kasuma-427676.jpg);
+}
+.s3{
+    background-image: url(./images/pexels-pixabay-164407.jpg);
+}
+.s4{
+    background-image: url(./images/pexels-pixabay-510873.jpg);
+}
+.s5{
+    background-image: url(./images/pexels-дмитрий-трепольский-8285167.jpg);
+} */
+.active{
+    opacity: 1;
+}
