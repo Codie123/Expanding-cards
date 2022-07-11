@@ -59,7 +59,7 @@ body::before{
     border: 1px solid lightgray;
     padding: 10px 20px;
     color: white;
-
+    cursor: pointer;
 }
 .btn-left{
     position: fixed;
@@ -69,6 +69,7 @@ body::before{
     border: 1px solid lightgray;
     padding: 10px 20px;
     color: white;
+    cursor: pointer;
 }
 /* .s1{
     background-image: url(./images/pexels-aleksandar-pasaric-1388030.jpg);
