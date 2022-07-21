@@ -1,0 +1,88 @@
+:root{
+    --bg-clr:#202632;
+     --card-clr:#313a49;
+     --cyan:#2ece82;
+     --font-main:'Anek Malayalam', sans-serif;
+ }
+ html{
+     font-size: 100%;
+ }
+ *,*::after,*::before{
+     box-sizing: border-box;
+     margin: 0;
+ }
+ body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--bg-clr);
+    color:white;
+ }
+ .toggle{
+    border: 0;
+    outline: 0;
+    background-color: white;
+    color: black;
+    padding: 10px 8px;
+    border-radius: 0.625rem;
+    cursor: pointer;
+ }
+ .toggle:hover{
+    background-color: #c4c4c4;
+ }
+ .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+ }
+ .clock{
+    background-color: #2ece82;
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+ }
+ .clock::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: black;
+ }
+.hour-hand{
+    width: 50px;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: 51.5%;
+    left: 52%;
+    transform-origin: bottom left;
+}
+.minute-hand{
+    width: 60px;
+    height: 4px;
+    background: white;
+    position: absolute;
+    top: 51.5%;
+    left: 52%;
+    transform-origin: bottom left;
+    transform: translate(-3px, -5px) rotate(270deg);
+}
+.seconds-hand{
+    width: 65px;
+    height: 2px;
+    background: tomato;
+    position: absolute;
+    top: 51.8%;
+    left: 51%;
+    transform-origin: bottom left;
+    transform: translate(-4px, 0px) rotate(45deg);
+}

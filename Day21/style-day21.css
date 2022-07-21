@@ -1,0 +1,47 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    
+}
+html{
+
+    font-size: 100%;
+    box-sizing: inherit;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+    background: #2b2b2b;
+}
+.block{
+    width: 200px;
+    height: 140px;
+    background: aliceblue;
+    border: 3px solid black;
+}
+.mover{
+    width: 100%;
+    height: 134px;
+    background-image: url('https://source.unsplash.com/random/150x150');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hold {
+    border: solid 5px #b55555;
+    opacity: 0.5;
+  }
+  
+  .hovered {
+    background-color: #b55555;
+    border-color: white;
+    border-style: dashed;
+  }
+@media(max-width:800px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
