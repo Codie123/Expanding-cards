@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;700&display=swap');
+:root{
+    --default-font:'Roboto Mono', monospace;
+
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size: 100%;
+}
+a,a:visited,a:active{
+    text-decoration: none;
+    color: white;
+}
+body{
+    font-family: var(--default-font);
+    font-size: 18px;
+}
+.header{
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    position: fixed;
+    z-index: 4;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+    max-width: 1200px;
+    color: white;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 25px;
+}
+.nav-bar li,a{
+    list-style-type: none;
+    color: white;
+}
+.nav-bar li a:hover{
+    color: tomato;
+}
+.select{
+    color: tomato;
+}
+.hero{
+    background-image: url(./images/phone-black.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.hero:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0,0, 0.5);
+    position: absolute;
+    z-index: 2;
+}
+.hero-content{
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+.hero-content h1{
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+/* content-container */
+.content-container{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.content{
+    margin: 20px 0;
+}
+/* active state */
+.header.active{
+    background-color: white;
+}
+.header.active .nav-container{
+    color: black;
+}
+
+.header.active .nav-bar a{
+    color: black;
+}
