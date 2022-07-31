@@ -1,0 +1,53 @@
+*,*::after,*::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+}
+
+.noti{
+    border: 0;
+    outline: 0;
+    background-color: slateblue;
+    color: white;
+    border-radius: 0.625rem;
+    padding: 20px ;
+
+}
+.btn{
+    border: 0;
+    outline: 0;
+    background-color: slateblue;
+    color: white;
+    border-radius: 0.625rem;
+    padding: 20px ;
+}
+.nt-container{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.insta{
+    background-color: pink;
+    color: black;
+}
+.snap{
+    background-color: yellow;
+    color: darkblue;
+}
+.youtube{
+    background-color:tomato;
+    color: white;
+}
