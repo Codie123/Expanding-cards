@@ -16,7 +16,7 @@ a,a:active,a:visited{
     color: white;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #0c0c0c;
     font-family: var(--font-default);
     color: white;
@@ -31,7 +31,6 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-
 }
 .container-nav{
     max-width: 1200px;
@@ -39,11 +38,67 @@ body{
     /* overflow: auto; */
     padding: 0 40px;
 }
+
 .container-nav .nav-list{
     display: flex;
     justify-content: space-around;
     list-style: none;
     gap: 10px;
+}
+.menu{
+    width: 30px;
+    transform: rotate(45deg);
+    height: 30px;
+    background: white;
+    margin: 0 10px 30px 0;
+    display: none;
+    transition: transform 0.5s ease-in;
+}
+.nav.active .menu{
+    transform: rotate(180deg);
+    transition: 0.5s ease-in;
+}
+.mb-nav{
+    display: none;
+}
+@media(max-width:500px){
+    .container-nav .nav-list{
+        display: none;
+    }
+    .nav .container-nav{
+        padding: 10px 20px;
+        position: relative;
+    }
+    .logo svg{
+        width: 100%;
+    }
+    .logo{
+        width: 50%;
+    }
+    .menu{
+        display: block;
+    }
+    .mb-nav{
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: yellowgreen;
+        transform: translateX(0);
+        transform-origin: 100% 50%;
+        transition: transform 0.5s ease-in;
+        z-index: 10;
+    }
+    .mb-nav .nav-list{
+        list-style-type: none;
+        text-align: right;
+        padding: 0;
+    }
+    .nav.active .mb-nav{
+       transform:translateX(100%);
+    }
+
 }
 @media(max-width:800px){
 .hero .container-nav{
@@ -111,9 +166,6 @@ padding: 0rem 1.25rem;
     font-size: 6.25rem;
     line-height: 6.25rem;
 }
-    /* old code */
-    /* font-size: 3rem; */
-
 .empty-block{
     position: relative;
     background-color: #5265f7;
@@ -137,6 +189,21 @@ padding: 0rem 1.25rem;
     transform: translate3d(-40px, 40px, 0);
     /* transform:0.3s cubic-bezier(.43, .04, .32, .97);     */
 }
+@media(max-width:500px){
+    .typo-hero h2{
+        font-size: 3em;
+        line-height: 1;
+        text-align: center;
+    }
+    .empty-block{
+        width: 100%;
+    }
+}
+
+    /* old code */
+    /* font-size: 3rem; */
+
+
 .typo-hero span:nth-child(1){
     color: #5265f7;
     position: relative;
@@ -267,6 +334,9 @@ hr{
     font-weight: 400;
     margin-bottom: 1rem;
 }
+.project-top h3 span{
+    color: yellowgreen;
+}
 .project-top p{
     font-size: 1.125rem;
     line-height: 1.6875rem;
@@ -379,8 +449,6 @@ hr{
     animation-name: hover;
     animation-play-state: running;
 }
-
-
 @keyframes hover{
     100%{
         transform: translateX(100%);
