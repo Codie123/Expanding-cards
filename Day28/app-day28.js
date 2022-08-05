@@ -6,19 +6,10 @@ const form = document.getElementById('form')
 // const card = document.querySelector('.card')
 
 async function hello(username){
-    try{
         let data = await fetch(apiUrl + username)
         let res = await data.json()
         createCard(res)
         userRepo(username)
-
-    }catch(e){
-        if(e.response.status == 404){
-            errorCard()
-        }
-    }
-  
-
 }
 async function userRepo(username){
     let data = await fetch(apiUrl + username + `/repos?sort=created`)
@@ -53,15 +44,12 @@ function createRepo(value){
     value.slice(0,5).forEach(repo => {
         let a = document.createElement('a')
         a.innerHTML = repo.name
+        a.href = repo.html_url
+        a.target = "_blank"
         repoEl.appendChild(a)
     });
 }
-function errorCard(){
-    let cradErr = document.createElement('div')
-    cradErr.classList.add('card')
-    cradErr.innerText = "Please enter the user name / enter a valid username "
-    main.appendChild(cradErr)
-}
+
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
     let name = search.value
