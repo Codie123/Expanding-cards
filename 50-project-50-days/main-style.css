@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=M+PLUS+1:wght@600;700;800;900&display=swap');
 :root{
     --font-default:'Koulen', cursive;
-
+    /* cursour tracking  */
+    --x:0;
+    --y:0;
+    
 }
 html{
     font-size: 100%;
@@ -69,6 +72,9 @@ body{
         padding: 10px 20px;
         position: relative;
     }
+    .mb-nav{
+        display: block;
+    }
     .logo svg{
         width: 100%;
     }
@@ -79,11 +85,7 @@ body{
         display: block;
     }
     .mb-nav{
-        position: absolute;
-        top: 20%;
-        right: 0;
-        width: 100%;
-        height: 100vh;
+       
         background-color: yellowgreen;
         transform: translateX(0);
         transform-origin: 100% 50%;
@@ -92,7 +94,7 @@ body{
     }
     .mb-nav .nav-list{
         list-style-type: none;
-        text-align: right;
+        text-align: center;
         padding: 0;
     }
     .nav.active .mb-nav{
@@ -131,6 +133,7 @@ max-width: 100%;
 min-height: 0rem;
 margin-bottom: 130px;
 padding: 0rem 1.25rem;
+z-index: 2;
 }
 
     /* old code */
@@ -168,11 +171,29 @@ padding: 0rem 1.25rem;
 }
 .empty-block{
     position: relative;
-    background-color: #5265f7;
+    /* background-color: #5265f7; */
+    background:linear-gradient(#00CC99,#6600FF);
     width: 439px;
     height: 210px;
+    overflow: hidden;
 }
-.empty-block::before{
+.empty-block::after{
+    --size:0;
+    content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.empty-block:hover::after{
+    --size:200px;
+}
+
+/* .empty-block::before{
     content: "";
     width: 100%;
     height: 210px;
@@ -187,8 +208,8 @@ padding: 0rem 1.25rem;
 }
 .empty-block:hover::before{
     transform: translate3d(-40px, 40px, 0);
-    /* transform:0.3s cubic-bezier(.43, .04, .32, .97);     */
-}
+    transform:0.3s cubic-bezier(.43, .04, .32, .97);    
+} */
 @media(max-width:500px){
     .typo-hero h2{
         font-size: 3em;

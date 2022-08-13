@@ -1,9 +1,21 @@
 const container =  document.querySelector('.container')
-const image = document.querySelector('img')
+const click  = document.getElementById('likes')
 
-container.addEventListener('click',(e)=>{
-    console.log(e)
-    beat(e)
+let a = 0
+let clicked = 0
+container.addEventListener('click',(e)=>{   
+
+    if(a === 0){
+        a = new Date().getTime()
+    }else{
+        if((new Date().getTime() - a) < 800){
+            beat(e)
+            a = 0
+        }else{
+            a = new Date().getTime()
+        }
+    }
+   
 })
 
 function beat(value){
@@ -25,6 +37,7 @@ function beat(value){
     heart.style.left = `${xinside}px`
 
     container.appendChild(heart)
+    click.innerHTML = `You liked it ${++clicked}`
 
     setTimeout(()=>{heart.remove()},1000)
     

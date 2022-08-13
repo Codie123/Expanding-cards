@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Password Generator</h1>
+      <div class="text-area">
+        <span id="result"></span>
+        <i class="fa-solid fa-clipboard"></i>
+      </div>
+      <div class="settings">
+        <div class="items">
+          <label for="length">Password length</label>
+          <input type="number" id="length" />
+        </div>
+        <div class="items">
+          <label for="uppercase">Include uppercase letters</label>
+          <input type="checkbox" name="uppercase" id="uppercase" />
+        </div>
+        <div class="items">
+          <label for="lowercase">Include lowercase letters</label>
+          <input type="checkbox" name="lowercase" id="lowercase" />
+        </div>
+        <div class="items">
+          <label for="numbers">Include numbers</label>
+          <input type="checkbox" name="numbers" id="numbers" />
+        </div>
+        <div class="items">
+          <label for="symbols">Include symbols</label>
+          <input type="checkbox" name="symbols" id="symbol" />
+        </div>
+      </div>
+      <button class="btn" id="generate">Generate Password</button>
+    </div>
+    <script src="./app-day31.js"></script>
+  </body>
+</html>

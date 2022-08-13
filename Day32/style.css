@@ -1,0 +1,52 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    display: inherit;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+.button{
+    display: inherit;
+    gap: 10px;
+}
+.check{
+    visibility: hidden;
+}
+.btn{
+    width: 80px;
+    height: 40px;
+    background: aliceblue;
+    border-radius: 2rem;
+    position: relative;
+    display: inherit;
+    align-items: center;
+    padding: 3px;
+    transition: background-color 0.3s ease-in;
+}
+.ball{
+    width: 35px;
+    height: 35px;
+    background: purple;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in;
+}
+.check:checked +.btn{
+    background-color: purple;
+}
+.check:checked +.btn .ball{
+    background-color: white;
+    transform: translateX(39px);
+}

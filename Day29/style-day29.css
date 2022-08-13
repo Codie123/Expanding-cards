@@ -21,30 +21,23 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.container::before{
-
-}
 .container i{
     position: absolute;
     color: red;
-  
     font-size: 5rem;
- 
+    animation-name: beat;
+    transform: translate(-50%,-50%) scale(0);
     animation-duration: .5s;
     transition: transform 0.5s ease-in;
     opacity: 1;
 }
-.container.active i{
-    animation-name: beat;
-}
+
+  
+
 @keyframes beat{
-    0%{
-        transform: scale(1);
-        opacity: 0.5;
-    }100%{
-        transform: scale(2);
-        opacity: 0.5;
+    to{
+        transform: translate(-50%,-50%) scale(1.0);
+        opacity: 0;
     }
 
 }
