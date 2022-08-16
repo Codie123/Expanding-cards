@@ -1,0 +1,44 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+}
+.container{
+    display: inherit;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+.image-array{
+    display: flex;
+    transition: transform 0.8s ease-in;
+}
+.image{
+    width: 100%;
+}
+.buttons{
+    display: inherit;
+    gap: 20px;
+}
+.btn{
+    border: 0;
+    outline: none;
+    padding:10px ;
+    border-radius:0.625rem;
+    width: 100%;
+    cursor: pointer;
+}
+.btn:hover,.bnt:active{
+    background-color: antiquewhite;
+}

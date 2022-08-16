@@ -59,7 +59,7 @@ nav{
     background-color: rgba(0,0,0,0.9);
     color: aliceblue;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 10px;
     gap: 10px;
 }
