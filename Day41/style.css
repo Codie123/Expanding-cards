@@ -1,0 +1,57 @@
+*,*::before,*::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(0,0,0,0.8);
+}
+.container{
+    background-color: white;
+    text-align: center;
+    max-height: 500px;
+    padding: 30px;
+    border: 1px solid steelblue;
+    border-radius: 0.625rem;
+}
+.input-fields{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.input{
+    padding: 30px 0;
+    width: 100px;
+    height: 130px;
+    border: 1px solid ;
+    border-radius: .325rem;
+    text-align: center;
+    font-size: 4.6875em;
+}
+.info{
+    max-width: 500px;
+    margin-inline: auto;
+    padding: 8px;
+    background: #578ef3cf;
+    border-radius: 0.325rem;
+    color: white;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* helper class */
+.mtb-30{
+    margin: 30px 0 30px 0;
+}

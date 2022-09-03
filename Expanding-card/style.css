@@ -18,6 +18,7 @@ body{
     height: 100vh;
     font-family: var(--Cairo);
     color: white;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 .container{
     display: flex;

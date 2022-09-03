@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Login with unique background</title>
+  </head>
+  <body>
+    <div class="bg-image"></div>
+    <div class="card" id="form">
+      <div class="header">
+        <h1>Image password strength</h1>
+        <p>Change the password to see the effects</p>
+      </div>
+
+      <div class="userinput">
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter Email" class="input" />
+      </div>
+
+      <div class="userinput">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="password"
+          class="input"
+        />
+      </div>
+      <button class="btn" id="submit">Submit</button>
+    </div>
+    <div class="card ty no-show" id="final">
+      <div class="icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div class="passStre" id="strength"></div>
+      <div class="desc">
+        <h2>Thank You</h2>
+        <p>You have been registered</p>
+      </div>
+    </div>
+    <script src="./app-day39.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+*,*::after,*::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+}
+.container.xl{
+    width: 600px;
+    height: 600px;
+}
+.container.xl .box{
+    transform: rotate(360deg);
+}
+.box{
+    background-image: url(./images/ddba22b-2fad9d00-1d3f-4ec8-a65d-199a09dfa4e1.gif);
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    width: 125px ;
+    height: 125px;
+    transition:  transform 1s ease-in;
+    position: relative;
+}
+.box::after{
+    content: '';
+    width: 17px;
+    height: 125px;
+    background-color: #945f20;
+    position: absolute;
+    right: -17px;
+    top: 12px;
+    transform: skew(0deg, 53deg);
+}
+.box::before{
+    position: absolute;
+    background-color: #fed19c;
+    content: '';
+    width: 125px;
+    height: 20px;
+    bottom: -20px;
+    left: 6px;
+    transform: skewX(35deg);
+}
+.btn{
+    border: 0;
+    outline: none;
+    padding: 10px;
+    background-image: linear-gradient(45deg,tomato,pink);
+    animation-duration: .5s ;
+    animation-iteration-count: infinite;
+    background-position: 100%;
+}
+.btn:hover{
+    animation-name: hover;
+
+}
