@@ -176,8 +176,18 @@ z-index: 2;
     width: 439px;
     height: 210px;
     overflow: hidden;
+    position: relative;
 }
-.empty-block::after{
+.empty-block::before{
+    content: "";
+    width: inherit;
+    height: inherit;
+    background-color: #00CC99;
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-10px);
+}
+/* .empty-block::after{
     --size:0;
     content: '';
   position: absolute;
@@ -191,7 +201,7 @@ z-index: 2;
 }
 .empty-block:hover::after{
     --size:200px;
-}
+} */
 
 /* .empty-block::before{
     content: "";

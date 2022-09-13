@@ -86,3 +86,17 @@ body{
     font-size: 32px;
     
 }
+
+/* extra
+ */
+ .box-cuz{
+    position: relative;
+ }
+ .box-cuz::before{
+    content: "";
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    position: absolute;
+    z-index: -1;
+ }
